@@ -1,0 +1,11 @@
+<form method="POST">
+    <table>
+    {% for data in tbl_data %}
+        <tr>
+            <td>{{ data.id }}</td>
+            <td>{{ data.key }}</td>
+            <td>{{ data.value }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</form>

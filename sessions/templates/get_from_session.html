@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Table template</title>
+    <link rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        {% for key, value in request.session.items %}
+            <tr>
+                <td>{{ key }}</td>
+                <td>{{ value }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</form>
+</body>
+</html>
